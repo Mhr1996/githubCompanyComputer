@@ -14,6 +14,8 @@
 	for (var i = 0; i < ball.length; i++) {
 		binaryTree(ball[i]);
 	}
+	
+	center(callback);
 
 	function Node(key){
 		this.key=key;
@@ -22,7 +24,7 @@
 	}
 
 
-
+                               
 	function binaryTree(value){
 		var key=new Node(value);
 
@@ -47,6 +49,21 @@
 		}else{
 			handleNode(root,key);
 		}
+	}
+
+	function callback(key){
+		console.log(key);
+	}
+
+	function center(callback){
+		var center_1=function(node,callback){
+			if (node!==null) {
+				callback(node.key);
+				center_1(node.left,callback);
+				center_1(node.right,callback);
+			}
+		}
+		center_1(root,callback);
 	}
 	</script>
 </html>
