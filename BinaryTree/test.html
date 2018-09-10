@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+	<script>
+	var ball=[8,3,10,1,6,14,4,7,13];
+	var root=null;
+
+	for (var i = 0; i < ball.length; i++) {
+		binaryTree(ball[i]);
+	}
+
+	function Node(key){
+		this.key=key;
+		this.left=null;
+		this.right=null;
+	}
+
+
+
+	function binaryTree(value){
+		var key=new Node(value);
+
+		var handleNode=function(r,k){
+			if (r.key>k.key) {
+				if (r.left===null) {
+					r.left=k;
+				}else{
+					handleNode(r.left,k);
+				}
+			}else{
+				if (r.right===null) {
+					r.right=k;
+				}else{
+					handleNode(r.right,k);
+				}
+			}
+		}
+
+		if (root===null) {
+			root=key;
+		}else{
+			handleNode(root,key);
+		}
+	}
+	</script>
+</html>
