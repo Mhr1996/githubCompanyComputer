@@ -11,11 +11,11 @@
 	var ball=[8,3,10,1,6,14,4,7,13];
 	var root=null;
 
+	var bt=new binaryTree();
+
 	for (var i = 0; i < ball.length; i++) {
-		binaryTree(ball[i]);
+		bt.addTree(ball[i]);
 	}
-	
-	center(callback);
 
 	function Node(key){
 		this.key=key;
@@ -25,8 +25,7 @@
 
 
                                
-	function binaryTree(value){
-		var key=new Node(value);
+	function binaryTree(){
 
 		var handleNode=function(r,k){
 			if (r.key>k.key) {
@@ -44,10 +43,85 @@
 			}
 		}
 
-		if (root===null) {
-			root=key;
-		}else{
-			handleNode(root,key);
+		this.center=function(callback){
+			var center_1=function(node,callback){
+				if (node!==null) {
+					center_1(node.left,callback);
+					center_1(node.right,callback);
+					callback(node.key);
+				}
+			}
+			center_1(root,callback);
+		}
+
+		this.addTree=function(value){
+			var key=new Node(value);
+
+			if (root===null) {
+				root=key;
+			}else{
+				handleNode(root,key);
+			}
+		}
+
+		this.min=function(Rt){
+			if (Rt) {
+				if (Rt.left!==null) {
+					this.min(Rt.left);
+				}else{
+					return Rt.key;
+				}
+			}
+			return null;
+		}
+
+		this.max=function(R){
+			if (R) {
+				while(R.right !== null){
+					R=R.right;
+				}
+				return R.key;
+			}
+			return null;
+		}
+
+		this.search=function(node,key){
+			if (node==null) {
+				return null;
+			}
+
+			if (node.key>key) {
+				return this.search(node.left,key);
+			}else if(node.key<key){
+				return this.search(node.right,key);
+			}else{
+				return node;
+			}
+		}
+
+		this.remove=function(node , key){
+			if (node===null) {
+				return null;
+			}
+
+			if (node.key>key) {
+				node.left=this.remove(node.left , key);
+				return node;
+			}else if(node.key<key){
+				node.right=this.remove(node.right , key);
+				return node;
+			}else{
+				if (node.left === null && node.right === null) {
+					node=null;
+					return node;
+				}else if(node.left === null){
+					node=node.right;
+					return node;
+				}else if(node.right === null){
+					node=node.left;
+					return node;
+				}
+			}
 		}
 	}
 
@@ -55,15 +129,10 @@
 		console.log(key);
 	}
 
-	function center(callback){
-		var center_1=function(node,callback){
-			if (node!==null) {
-				callback(node.key);
-				center_1(node.left,callback);
-				center_1(node.right,callback);
-			}
-		}
-		center_1(root,callback);
-	}
+	/*bt.center(callback);
+	bt.min(root)*/
+	console.log(root);
+	bt.remove(root,13);
+	console.log(root);
 	</script>
 </html>
