@@ -1,0 +1,76 @@
+1.npm init 在文件夹中创建package.json
+
+2.cnpm i webpack webpack-cli -g 同时全局安装
+  cnpm i webpack webpack-cli -D 同时在项目目录安装
+
+3.在项目根目录创建一个src目录 
+里面创建一个src/index.html文件
+里面创建一个src/index.js文件
+
+4.在项目根目录创建webpack.config.js配置文件 
+
+5.设置webpack.config.js的mode模块，两种模式
+
+const path = require('path');//它是一个核心Node.js模块，用于操作文件路径
+module.exports = {
+    mode: 'development' // development 开发模式 production 生产模式
+    output: {
+	    path: path.resolve(__dirname, 'dist'),
+	    filename: '[name].js'
+	  }
+}
+
+此时就可以执行webpack进行打包
+默认约定了： 
+打包的入口是：src => index.js
+打包的输出文件是：dist => main.js
+
+6.实时刷新
+webpack-dev-server配置： npm install webpack-dev-server -g
+项目局部安装：npm install webpack-dev-server -D
+
+在package.json文件中的”scripts”中加入："dev": "webpack-dev-server --open --port 3000 --hot"
+*webpack-dev-server不会自动编译文件，但你修改的内容会同步到内存中，只是在本地他不会生成文件。
+
+如果出现以下错误：Cannot find module ‘source-map-resolve’ 
+	则执行：cnpm install -g source-map-resolve和cnpm install -D source-map-resolve
+如果继续出现下面错误：Error: Cannot find module ‘extglob’ 
+	则安装：cnpm install -D extglob
+
+*sass*
+7.因为sass-loader依赖于node-sass，所以需要先安装node-sass  参考网址:https://www.cnblogs.com/hezihao/p/8028591.html
+前提
+cnpm i style-loader --save-dev
+cnpm i css-loader --save-dev
+
+cnpm install node-sass --save-dev 
+cnpm install sass-loader --save-dev 
+
+cnpm i -D postcss-loader 用于使用PostCSS处理CSS的webpack的加载器
+该插件的主要是为了抽离css样式,防止将样式打包在js中引起页面样式加载错乱的现象
+npm install extract-text-webpack-plugin --save-dev
+warn 由于webpack v4 extract-text-webpack-plugin不应该用于css。请改用github : mini-css-extract-plugin。
+
+配置
+module: {
+	rules: [
+		//把sass编译成css 添加到header标签里
+		{
+		    test: /\.scss/,
+		    use: [
+			    {loader: 'style-loader'}, 
+			    {loader: 'css-loader'},
+				{loader: 'sass-loader'}
+		    ]
+		},
+		存在一个即可  mini-css-extract-plugin
+		{
+		    test:/\.scss$/,
+		    use:[
+		        MiniCssExtractPlugin.loader,
+		        "css-loader",
+		        "sass-loader"
+		    ]
+		}
+	]
+},
