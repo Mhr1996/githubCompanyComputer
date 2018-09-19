@@ -1,4 +1,5 @@
 var webpack=require("webpack");
+const path = require('path');
 
 module.exports = {
   entry : {
@@ -7,10 +8,11 @@ module.exports = {
   output : {//打包输出文件
     filename: '[name].js',
     publicPath: 'http://localhost:7000/out',
-    path: __dirname + '/out',
+    path: path.resolve(__dirname, 'out'),
   },
   module : {
     rules: [//打包规则
+      {test : /\.css$/, use:['style-loader', 'css-loader']},
       {test : /\.less$/, use:['style-loader', 'css-loader', 'less-loader']},
       {
         test : /\.js$/, 

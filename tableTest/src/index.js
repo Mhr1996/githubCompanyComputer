@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Table from './table';
-
+require('index.css');
 class Template extends React.Component{
 	render(){
 		return(
