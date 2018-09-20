@@ -81,31 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/productList/productList.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/productList/productList.js":
+/*!****************************************!*\
+  !*** ./src/productList/productList.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction showTime(){\r\n\tconsole.log(\"showTime\");\r\n}\r\n\r\nshowTime();\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
-/***/ "./src/sass/index.scss":
-/*!*****************************!*\
-  !*** ./src/sass/index.scss ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("throw new Error(\"Module build failed (from ./node_modules/_extract-text-webpack-plugin@3.0.2@extract-text-webpack-plugin/dist/loader.js):\\nError: \\\"extract-text-webpack-plugin\\\" loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example\\n    at Object.pitch (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_extract-text-webpack-plugin@3.0.2@extract-text-webpack-plugin\\\\dist\\\\loader.js:57:11)\");\n\n//# sourceURL=webpack:///./src/sass/index.scss?");
+eval("\n\n//# sourceURL=webpack:///./src/productList/productList.js?");
 
 /***/ })
 

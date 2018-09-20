@@ -90,22 +90,10 @@
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction showTime(){\r\n\tconsole.log(\"showTime\");\r\n}\r\n\r\nshowTime();\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
-/***/ "./src/sass/index.scss":
-/*!*****************************!*\
-  !*** ./src/sass/index.scss ***!
-  \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/index.scss?");
+eval("throw new Error(\"Module build failed (from ./node_modules/_babel-loader@8.0.2@babel-loader/lib/index.js):\\nError: Cannot find module '@babel/core'\\n babel-loader@8 requires Babel 7.x (the package '@babel/core'). If you'd like to use Babel 6.x ('babel-core'), you should install 'babel-loader@7'.\\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)\\n    at Function.Module._load (internal/modules/cjs/loader.js:507:25)\\n    at Module.require (internal/modules/cjs/loader.js:637:17)\\n    at require (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_v8-compile-cache@2.0.2@v8-compile-cache\\\\v8-compile-cache.js:159:20)\\n    at Object.<anonymous> (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_babel-loader@8.0.2@babel-loader\\\\lib\\\\index.js:8:11)\\n    at Module._compile (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_v8-compile-cache@2.0.2@v8-compile-cache\\\\v8-compile-cache.js:178:30)\\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)\\n    at Module.load (internal/modules/cjs/loader.js:599:32)\\n    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)\\n    at Function.Module._load (internal/modules/cjs/loader.js:530:3)\\n    at Module.require (internal/modules/cjs/loader.js:637:17)\\n    at require (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_v8-compile-cache@2.0.2@v8-compile-cache\\\\v8-compile-cache.js:159:20)\\n    at loadLoader (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_loader-runner@2.3.0@loader-runner\\\\lib\\\\loadLoader.js:13:17)\\n    at iteratePitchingLoaders (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_loader-runner@2.3.0@loader-runner\\\\lib\\\\LoaderRunner.js:169:2)\\n    at runLoaders (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_loader-runner@2.3.0@loader-runner\\\\lib\\\\LoaderRunner.js:362:2)\\n    at NormalModule.doBuild (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\NormalModule.js:265:3)\\n    at NormalModule.build (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\NormalModule.js:412:15)\\n    at Compilation.buildModule (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\Compilation.js:617:10)\\n    at moduleFactory.create (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\Compilation.js:995:12)\\n    at factory (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\NormalModuleFactory.js:405:6)\\n    at hooks.afterResolve.callAsync (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\NormalModuleFactory.js:155:13)\\n    at AsyncSeriesWaterfallHook.eval [as callAsync] (eval at create (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_tapable@1.1.0@tapable\\\\lib\\\\HookCodeFactory.js:32:10), <anonymous>:6:1)\\n    at AsyncSeriesWaterfallHook.lazyCompileHook (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_tapable@1.1.0@tapable\\\\lib\\\\Hook.js:154:20)\\n    at resolver (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\NormalModuleFactory.js:138:29)\\n    at process.nextTick (E:\\\\githubCompanyComputer\\\\tableTest2\\\\node_modules\\\\_webpack@4.19.1@webpack\\\\lib\\\\NormalModuleFactory.js:342:9)\\n    at process._tickCallback (internal/process/next_tick.js:61:11)\");\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 

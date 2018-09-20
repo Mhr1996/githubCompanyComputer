@@ -90,22 +90,10 @@
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_sass_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction showTime(){\r\n\tconsole.log(\"showTime\");\r\n}\r\n\r\nshowTime();\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
-/***/ "./src/sass/index.scss":
-/*!*****************************!*\
-  !*** ./src/sass/index.scss ***!
-  \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/index.scss?");
+eval("throw new Error(\"Module build failed (from ./node_modules/_babel-loader@7.1.5@babel-loader/lib/index.js):\\nSyntaxError: E:/githubCompanyComputer/tableTest2/index.js: Unexpected token (8:3)\\n\\n   6 | \\trender(){\\n   7 | \\t\\treturn{\\n>  8 | \\t\\t\\t<div>Hellow My master</div>\\n     | \\t\\t\\t^\\n   9 | \\t\\t}\\n  10 | \\t}\\n  11 | }\\n\");\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
