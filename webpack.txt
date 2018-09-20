@@ -74,3 +74,27 @@ module: {
 		}
 	]
 },
+
+
+8.new MiniCssExtractPlugin({ // 此插件将CSS提取到单独的文件中。它为每个包含CSS的JS文件创建一个CSS文件。它支持CSS和SourceMaps的按需加载。
+  // Options similar to the same options in webpackOptions.output  both options are optional
+  filename: 'css/[name].[hash:4].css',
+  chunkFilename: '[id].[hash:4].css'
+})
+9.new htmlWebpackPlugin({//生成js后绑定关联页面 默认为output的path位置，默认文件为index.html
+	template:"./index.html",//模板文件名
+	inject:"head",//指定js的html位置标签
+	filename: 'index.html',
+	chunks:['index','productList'],
+	minify: { //压缩HTML文件
+        removeComments: false, //移除HTML中的注释
+        collapseWhitespace: false, //删除空白符与换行符
+        minifyJS: false
+        //removeScriptTypeAttributes: true, //删除<script>的type="text/javascript"
+        //removeStyleLinkTypeAttributes: true //删除<style>和<link>的type="text/css"
+    }
+})
+
+10.安装npm install react react-dom --save
+
+11.
