@@ -1,8 +1,7 @@
-
-console.log("hello")
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './src/sass/index.scss';
+import Reactfrom from './src/reactfrom/reactfrom';
 
 class Template extends React.Component{
 	render(){
@@ -12,4 +11,4 @@ class Template extends React.Component{
 	}
 }
 
-ReactDOM.render(<div><Template /></div>, document.getElementById("app"))
+ReactDOM.render(<div><Template /><Reactfrom /></div>, document.getElementById("app"))
