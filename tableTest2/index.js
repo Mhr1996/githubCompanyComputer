@@ -1,15 +1,25 @@
-
-console.log("hello")
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './src/sass/index.scss';
 
-class Template extends React.Component{
+class Table extends React.Component{
 	render(){
 		return(
-			<div> 333444**** </div>
+			<div>
+				<a href="http://www.baidu.com">{this.props.name}</a>
+			</div>
 		)
 	}
 }
 
-ReactDOM.render(<div><Template /></div>, document.getElementById("app"))
+class Dv extends React.Component{
+	render(){
+		return(
+			<div>
+				<Table name="Hello World!"/>
+			</div>
+		)
+	}
+}
+
+ReactDOM.render(<Dv />, document.getElementById("app"))
