@@ -23,8 +23,4 @@ class Dv extends React.Component{
 	}
 }
 
-<<<<<<< HEAD
-ReactDOM.render(<Dv />, document.getElementById("app"))
-=======
-ReactDOM.render(<div><Template /><Reactfrom /></div>, document.getElementById("app"))
->>>>>>> 9c15f704d2fbdecbeff10d0257f5c8ddf27c317b
+ReactDOM.render(<div><Dv /><Reactfrom /></div>, document.getElementById("app"))
