@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './src/sass/index.scss';
 import Reactfrom from './src/reactfrom/reactfrom';
+import MessageBook from './src/messageBook/messageBook';
 
 class Table extends React.Component{
 	render(){
@@ -23,4 +24,4 @@ class Dv extends React.Component{
 	}
 }
 
-ReactDOM.render(<div><Dv /><Reactfrom /></div>, document.getElementById("app"))
+ReactDOM.render(<div><Table /><Reactfrom /><MessageBook /></div>, document.getElementById("app"))
