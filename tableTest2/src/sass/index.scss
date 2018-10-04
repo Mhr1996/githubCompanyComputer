@@ -1,5 +1,23 @@
 $highlight-color: #ccc;
-html{
+html,body{
 	background-color: $highlight-color;
-	h1 { color: #333 }
+	padding:0;
+	margin: 10px;
+}
+#one{
+	text-decoration:none
+}
+textarea{
+	padding: 0;
+}
+.project{
+	ul{
+		overflow: hidden;
+		padding: 0;
+		list-style: none;
+		li{
+			width: 25%;
+			float: left;
+		}
+	}
 }

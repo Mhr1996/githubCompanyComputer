@@ -32,11 +32,9 @@ class CommentList extends React.Component{//错误的方法
 		return(
 			<div>
 				<p>评论列表</p>
-				<ul>
-					{this.props.clist.map((item,index)=>{
-						return <li onClick={this.exportIndex.bind(this,index)} key={index}>{item}</li>
-					})}
-				</ul>
+				{this.props.clist.map((item,index)=>{
+					return <div onClick={this.exportIndex.bind(this,index)} key={index}>{item}</div>
+				})}
 			</div>
 		)
 	}
