@@ -97,4 +97,28 @@ module: {
 
 10.安装npm install react react-dom --save
 
-11.
+11.要引入bootstrap 
+ 	先$ npm install bootstrap@3 --save
+ 	require('bootstrap') 代码的作用是加载 Bootstrap 的所有 jQuery 插件。其中，bootstrap 模块自身并不导出任何内容。你可以通过加载安装包顶级目录下的 /js/*.js 文件的方式手动加载单个的 Bootstrap 插件。
+
+ 	从上面这段话我们可以知道，如果需要在React中使用bootstrap， 首先需要使用npm 安装 bootstrap，然后找到Bootstrap的所在目录例如：
+
+    /node_moduls/bootstrap/css/bootstrap.css
+	然后直接在React的入口中使用 import 引用即可：
+
+  	import 'bootstrap/css/bootstrap.css'
+
+  	需要注意的一点是：webpack中需要添加对应的css loader 和 url loader：
+
+   	npm install css-loader style-loader --save-dev
+   	npm install url-loader --save-dev   
+
+   	如果项目中只加了css loader 而没有加 url-loader 会出现资源文件不能解析的情况，例如：
+
+	ERROR in ./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf      Module parse failed: Unexpected character ' ' (1:0)
+	安装好url-loader后， 在webpack的配置文件中配置一下就好：
+
+	{
+		test:/\.woff?$|\.woff2?$|\.svg?$|\.ttf?$|\.eot?$/,
+		loaders:'url-loader''
+	}。
