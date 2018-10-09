@@ -1,4 +1,5 @@
 var webpack=require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 
 module.exports = {
@@ -13,7 +14,14 @@ module.exports = {
   module : {
     rules: [//打包规则
       {test : /\.css$/, use:['style-loader', 'css-loader']},
-      {test : /\.less$/, use:['style-loader', 'css-loader', 'less-loader']},
+      {
+          test:/\.scss$/,
+          use:[
+              MiniCssExtractPlugin.loader,
+              "css-loader",
+              "sass-loader"
+          ]
+      },
       {
         test : /\.js$/, 
         loader : 'babel-loader',
@@ -25,6 +33,10 @@ module.exports = {
           ]
         }
       },
+      {
+        test:/\.woff?$|\.woff2?$|\.svg?$|\.ttf?$|\.eot?$/,
+        loaders:'url-loader'
+      },
       {test: /\.(jpg|png|gif|svg)$/, use: ['url-loader?limit=8192&name=./[name].[ext]']}
     ],
   },
@@ -33,6 +45,10 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       "windows.jQuery": "jquery"
+    }),
+    new MiniCssExtractPlugin({
+        filename: 'css/[name].[hash:4].css',
+        chunkFilename: '[id].[hash:4].css'
     })
   ],
   devServer: {//服务器端口地址
