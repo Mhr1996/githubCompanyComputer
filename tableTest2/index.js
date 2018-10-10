@@ -7,6 +7,7 @@ import ReactContext from './src/reactContext/reactContext';
 
 import ModifyColor from './src/modifyColor/modifyColor';
 import Timer from './src/timer/timer';
+import AddNumber from './src/addNumber/addNumber';
 
 class Table extends React.Component{
 	constructor(props){
@@ -56,7 +57,8 @@ class Control extends React.Component{
 				<ul>
 					<li><h2>案例5</h2><ModifyColor /></li>
 					<li><h2>案例6</h2><A  name="小明" age="102" sex="男"/></li>
-					<li><h2>案例6</h2><Timer /></li>
+					<li><h2>案例7</h2><Timer /></li>
+					<li><h2>案例8</h2><AddNumber /></li>
 				</ul>
 			</div>
 		)

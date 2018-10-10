@@ -1,7 +1,7 @@
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var webpack=require("webpack");
-const path = require('path');
+const path = require('path');//提供了处理和转换文件路径的工具。
 
 module.exports = {
 	mode: 'development',
@@ -12,7 +12,7 @@ module.exports = {
 	output: {
 	    publicPath: 'http://localhost:7000',
 	    filename: 'js/[name][hash:6].js',
-	    path: path.resolve(__dirname, 'dist')
+	    path: path.resolve(__dirname, 'dist') //__dirname 表示当前文件所在的目录的绝对路径
 	},
 	module: { //这些选项决定了如何处理项目中的不同类型的模块。
 		rules: [
