@@ -11,7 +11,7 @@ class CommentBox extends React.Component{
 		this.handelChange=this.handelChange.bind(this);
 	}
 	submitF(){
-		if (this.state.value1=="") {console.log("不可为空");return;}
+		if (this.state.value1=="") {alert("不可为空");return;}
 		this.props.method(this.state.value1);
 		this.setState({value1:''})
 	}
