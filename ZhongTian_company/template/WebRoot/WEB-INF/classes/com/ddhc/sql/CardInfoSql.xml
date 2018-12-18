@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.ddhc.dao.CardInfoDao">
+	<!--添加学生信息接口 -->
+	<insert id="addCardInfo" parameterType="com.ddhc.entity.CardInfo">
+		insert into
+		CardInfo
+		(applyCode,applyName,mailAddr,phone,applyTime,company,money,status,applyNum,payMethod,payId,openId,studentName)
+		values
+		(#{applyCode},#{applyName},#{mailAddr},#{phone},#{applyTime},#{company},#{money},#{status},#{applyNum},#{payMethod},#{payId},#{openId},#{studentName})
+	</insert>
+
+	<!-- 查询学生信息 -->
+	<select id="queryCardInfo" parameterType="com.ddhc.entity.CardInfo"
+		resultType="map">
+		<if test="recordNumFlag>-1">
+			select count(*) as totalNum
+		</if>
+		<if test="recordNumFlag==-1">
+			select *
+		</if>
+		from CardInfo
+		<where>
+			<if test="applyCode!=null and !''.equals(applyCode)">
+				and applyCode=#{applyCode}
+			</if>
+			<if test="applyName!=null and !''.equals(applyName)">
+				and applyName=#{applyName}
+			</if>
+			<if test="mailAddr!=null and !''.equals(mailAddr)">
+				and mailAddr =#{mailAddr}
+			</if>
+			<if test="phone!=null and !''.equals(phone)">
+				and phone =#{phone}
+			</if>
+			<if test="applyTime!=null and !''.equals(applyTime)">
+				and applyTime =#{applyTime}
+			</if>
+			<if test="company!=null and !''.equals(company)">
+				and company =#{company}
+			</if>
+			<if test="payMethod!=null and !''.equals(payMethod)">
+				and payMethod =#{payMethod}
+			</if>
+			<if test="openId!=null and !''.equals(openId)">
+				and openId =#{openId}
+			</if>
+			<if test="payId!=null and !''.equals(payId)">
+				and payId =#{payId}
+			</if>
+			<if test="status>-1">
+				and status =#{status}
+			</if>
+			
+			<if test="datemin!=null and datemin!='' and datemax!=null and datemax!='' ">
+			      and applyTime BETWEEN  #{datemin}  and  #{datemax}
+            	 <!-- nd date_format(rechargeTime,'%Y-%m-%d') BETWEEN  #{datemin}  and  #{datemax}  -->
+        	</if>
+		</where>
+		<if test="recordNumFlag==-1">
+			limit ${currentPageNum},${pageNum}
+		</if>
+	</select>
+
+	<!-- 修改学生信息 -->
+	<update id="modifyCardInfo" parameterType="com.ddhc.entity.CardInfo">
+		update CardInfo
+		<set>
+		   <if test="applyCode!=null and !''.equals(applyCode)">
+				applyCode=#{applyCode},
+			</if>
+			<if test="applyName!=null and !''.equals(applyName)">
+				applyName=#{applyName},
+			</if>
+			<if test="mailAddr!=null and !''.equals(mailAddr)">
+				mailAddr =#{mailAddr},
+			</if>
+			<if test="phone!=null and !''.equals(phone)">
+				phone =#{phone},
+			</if>
+			<if test="applyTime!=null and !''.equals(applyTime)">
+				applyTime =#{applyTime},
+			</if>
+			<if test="company!=null and !''.equals(company)">
+				commpany =#{commpany},
+			</if>
+			<if test="openId!=null and !''.equals(openId)">
+				openId =#{openId},
+			</if>
+			<if test="studentName!=null and !''.equals(studentName)">
+				studentName =#{studentName},
+			</if>
+			<if test="money>0">
+				money =#{money},
+			</if>
+			<if test="status>-1">
+				status =#{status},
+			</if>
+			<if test="applyNum>0">
+			    applyNum=#{applyNum},
+			</if>
+			
+			
+		</set>
+		where  
+		  payId=#{payId}
+	</update>
+
+	<delete id="deleteCardInfo" parameterType="com.ddhc.entity.CardInfo">
+		delete from CardInfo where applyCode = #{applyCode}
+	</delete>
+
+	<!-- <delete id="deleteEmpoyeeInfolist" parameterType="java.util.List"> 
+		delete from ManagerInfo where employeeCode in <foreach collection="list" 
+		item="item" index="index" open="(" separator="," close=")"> #{item.Employee} 
+		</foreach> </delete> -->
+
+
+</mapper>

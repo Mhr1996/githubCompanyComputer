@@ -1,0 +1,32 @@
+@charset "gb2312";
+html{width:100%; hegiht:100%;}
+.system_logo img {width: 95%;}
+.user_operating{position:relative;}
+.mmul{position:absolute;top:44px; right:6px;  Ltext-align: center;padding:10px;box-sizing:border-box;z-index: 9; background:rgba(60,60,60,.9);width: 80%;border-radius:4px; border:1px solid #666;display: none;  }
+.mmul li{line-height:40px; }
+.mmul li:nth-of-type(1){color:#fff;}
+.editpw{border-top:1px dotted #ccc;color:#1870e2;background:url(images/arblue-r.png) center right no-repeat; background-size:16px;}
+.pop-box{position:fixed;width:100%; height:100%; background:rgba(0,0,0,.6);z-index:1001;display: none;}
+.log-box{background:#f7f7f7;border:1px solid #72A5B9; border-radius:.4px; top:44px; left:0;width:26%; padding:20px; border-radius:4px; -webkit-box-shadow: 0 4px 2px 0 rgba(0,0,0,.8); position:relative; box-shadow: 0 4px 2px 0  rgba(0,0,0,.8);}
+.log-dl dd{margin-bottom:20px;color: #fff;  }	 
+.log-dl	 input{ font-family:"寰�蒋���";width:100%; height:40px; border-radius:4px; border:1px #bbe0ef solid;
+padding:0 5px 0 10px; background:rgba(240,240,240,.6);color:#333; font-size:16px; box-sizing:border-box;-moz-box-sizing:border-box; /* Firefox */-webkit-box-sizing:border-box; /* Safari */}
+.btnbox{color:#fff; height:40px; text-align:center; border-radius:4px; cursor:pointer; letter-spacing:4px; font-size:16px;line-height: 40px;}
+.bg-red{ background:rgba(173,16,16,.8); }
+.welcome{font-size:18px;color:#333;text-align:center;}
+.f-l{float:left;}
+.f-r{float:right;}
+.cl{clear:both;}
+.r-close{ width:30px; height:30px;line-height:30px;position:absolute;top:0; right:0; font-size:20px;text-align:center; cursor:pointer; }
+.submenu li.children{margin-left: 15px; z-index: 12; background-color: #fff; }
+.nav-list .submenu li a>[class*="fa-"]:first-child{top: 11px; }
+.nav-list .submenu li.children:before{content: ""; display: inline-block; position: absolute; width: 10px; left: 18px; top: 19px; }
+.nav-list .submenu li.children a>[class*="fa-"]:first-child{left: -5px; }
+.nav-list .submenu li.children a{margin-left: 15px; padding: 7px 0 9px 22px; overflow: hidden;/*���瓒�������/ text-overflow: ellipsis;/* 瓒������剧ず涓虹��ュ�*/ width: 140px; white-space: nowrap;/*���涓��琛��琛�/ }
+.nav-list .submenu:before{border: 0px;}
+.nav-list .submenu li:after{content: ""; display: block; position: absolute; z-index: 1; left: 18px; top: 0; bottom: 0; border-width: 0 0 0 1px; border-left: 1px dotted #438EB9; }
+.nav-list .submenu li.active a [class*="fa-"]:first-child{display: inline-block; }
+.nav-list .submenu li a:hover [class*="fa-"]{display: inline-block; }
+.fa_d{font-size: 18px; position: absolute; top: 10px; right: 15px; z-index: 13; }
+.eggs{display: none; }
+.nav-list li.open>a:after{display: none; }

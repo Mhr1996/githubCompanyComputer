@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL MAP Config 3.1//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+
+
+  <settings>
+      <setting name="callSettersOnNulls" value="true"/>
+      <!-- SLF4J, LOG4J, LOG4J2, JDK_LOGGING, COMMONS_LOGGING, STDOUT_LOGGING, NO_LOGGING or a full qualified class name that implements org.apache.ibatis.logging. 
+      <setting name="logImpl" value="LOG4J"/>
+      -->
+  </settings>
+  
+  
+  <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+                <property name="url" value="jdbc:sqlserver://183.238.164.150:1433;DatabaseName=hxData" />
+                <property name="username" value="sa" />
+                <property name="password" value="lyyl810412" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="com/ddhc/sql/OAWXMainSql.xml" />
+    </mappers>
+</configuration>
