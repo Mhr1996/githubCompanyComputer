@@ -4,7 +4,6 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 	String flag = request.getParameter("flag");
-	String Mid = request.getParameter("Mid");
 %>
 <html>
 <head>
@@ -30,7 +29,7 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>任务编排</title>
+<title>标题</title>
 </head>
 <body>
 <div class="pd-20 permissionsQuery">
@@ -109,7 +108,6 @@ pageNav.go2 = function(p, pn){
 
 var t={
 	gloFlag:'<%=flag%>',
-	pSum:1,
 	pN:0
 };
 
@@ -194,9 +192,9 @@ function query(params,p){
 				 	var e6f2fe = i==0 ? "#e6f2fe" : "";
 				 	var No =[parseInt(jishu)+1];
 				 	trStr += '<tr id="tr'+i+'" class="text-c" style="background-color:'+e6f2fe+'" Code="'+dIF.id+'">'+
-					'<td> '+No+'</td>'+
-					'<td> '+dIF.id+'</td>'+
-					'<td> '+dIF.name+'</td>'+
+					'<td>'+No+'</td>'+
+					'<td>'+dIF.id+'</td>'+
+					'<td>'+dIF.name+'</td>'+
 					'</tr>';
 			 	}
 			 	$("tbody").append(trStr);
